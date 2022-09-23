@@ -3,6 +3,10 @@
   justify-content: center;
 
   margin-top: 1.7rem;
+
+  @include breakpoint($tablet-bp) {
+    display: none;
+  }
 }
 
 .social__item {

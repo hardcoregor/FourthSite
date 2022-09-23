@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 @import "vendor/reset.scss";
 
 html {
@@ -12,6 +13,16 @@ body {
     font-size: 1.4rem;
     line-height: 1.5;
     color: $white;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+
+    @include breakpoint($tablet-bp) {
+        &.show-sidebar {
+            overflow: hidden;
+        }
+    }
 }
 
 *,
@@ -32,6 +43,7 @@ a {
 @import "blocks/page";
 @import "blocks/header";
 @import "blocks/nav";
+@import "blocks/burger";
 @import "blocks/subnav";
 @import "blocks/search";
 @import "blocks/sidebar";
@@ -51,3 +63,4 @@ a {
 @import "blocks/work";
 @import "blocks/tags";
 @import "blocks/cabinet";
+@import "blocks/modal";
